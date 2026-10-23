@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Informasi Pendaftar - Tugas 3 Pemweb</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Detail Informasi Pendaftar</h1>
+    <p>Halaman dummy yang menampilkan data pendaftar (contoh statis)</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Data Pendaftar</h2>
+
+      <!-- Microformats: h-card -->
+      <div class="h-card box" style="margin-bottom: 1.5rem;">
+        <div class="p-name">Muhammad Faiz Ashfaq</div>
+        <div class="p-org">Institut Teknologi Sumatera - Teknik Informatika</div>
+        <div>Email: <a class="u-email" href="mailto:faiz@example.com">muhammad.124140321@student.itera.ac.id</a></div>
+        <div>Telepon: <span class="p-tel">082237751240</span></div>
+        <div>Kelas: <span class="p-note">RA</span></div>
+      </div>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Nilai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Nama Lengkap</td><td>Muhammad Faiz Ashfaq</td></tr>
+          <tr><td>NIM</td><td>124140144</td></tr>
+          <tr><td>Kelas</td><td>RA</td></tr>
+          <tr><td>Email</td><td>muhammad.124140321@student.itera.ac.id</td></tr>
+          <tr><td>Telepon</td><td>082237751240</td></tr>
+          <tr><td>Tanggal Lahir</td><td>08-13-2001</td></tr>
+          <tr><td>Program Studi</td><td>Informatika</td></tr>
+          <tr><td>Website</td><td>https://example.com</td></tr>
+          <tr><td>Jenis Kelamin</td><td>Laki-laki</td></tr>
+          <tr><td>Hobi</td><td>Coding, Membaca</td></tr>
+          <tr><td>Alamat</td><td>Jl. Contoh No. 1, Lampung Selatan</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Informasi Query String</h2>
+      <p>Halaman ini didesain menerima data melalui query string dari halaman pendaftaran (method GET). Contoh URL:</p>
+      <div class="box">
+        <code>detail.html?nama=Muhammad+Faiz+Ashfaq&amp;nim=123140000&amp;kelas=RC&amp;email=faiz%40example.com&amp;...</code>
+      </div>
+    </section>
+
+    <div class="actions">
+      <a href="index.html" class="btn">Kembali ke Pendaftaran</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2025
+  </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Pendaftaran - Tugas 3 Pemweb</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Pendaftaran Komunitas "Ingin Ngoding"</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Form Pendaftaran Mahasiswa</h2>
+      <p>Isi data berikut dengan benar. Data akan dikirim ke halaman detail informasi pendaftar melalui query string (method GET).</p>
+
+      <form action="detail.html" method="get" id="registration-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required />
+          </div>
+
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="Contoh: 123140000" pattern="[0-9]{8,}" title="Minimal 8 digit angka" required />
+          </div>
+
+          <div class="form-group">
+            <label for="kelas">Kelas</label>
+            <select id="kelas" name="kelas" required>
+              <option value="">Pilih Kelas</option>
+              <optgroup label="Kelas Reguler">
+                <option value="RA">RA</option>
+                <option value="RB">RB</option>
+                <option value="RC">RC</option>
+              </optgroup>
+              <optgroup label="Kelas Khusus">
+                <option value="KA">KA</option>
+                <option value="KB">KB</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="telepon">Nomor Telepon</label>
+            <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" />
+          </div>
+
+          <div class="form-group">
+            <label for="tanggal">Tanggal Lahir</label>
+            <input type="date" id="tanggal" name="tanggal" />
+          </div>
+
+          <div class="form-group">
+            <label for="program">Program Studi</label>
+            <input type="text" id="program" name="program" list="program-list" placeholder="Pilih / ketik program studi" />
+            <datalist id="program-list">
+              <option value="Informatika" />
+              <option value="Sistem Informasi" />
+              <option value="Teknik Elektro" />
+              <option value="Teknik Sipil" />
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="website">Website / Portofolio</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com" />
+          </div>
+
+          <div class="form-group full">
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+              <label><input type="radio" name="gender" value="Laki-laki" /> Laki-laki</label>
+              <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Hobi</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="hobi" value="Membaca" /> Membaca</label>
+              <label><input type="checkbox" name="hobi" value="Coding" /> Coding</label>
+              <label><input type="checkbox" name="hobi" value="Olahraga" /> Olahraga</label>
+              <label><input type="checkbox" name="hobi" value="Musik" /> Musik</label>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap"></textarea>
+          </div>
+
+          <div class="form-group full">
+            <label for="dokumen">Upload Dokumen (KTP/KTM)</label>
+            <input type="file" id="dokumen" name="dokumen" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">Daftar</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Preview Query String</h2>
+      <p>Setelah submit, browser akan membuat query string otomatis, contoh:</p>
+      <div class="box">
+        <code>detail.html?nama=...&amp;nim=...&amp;kelas=...&amp;email=...&amp;...</code>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2025
+  </footer>
+</body>
+</html>
